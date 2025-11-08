@@ -8,13 +8,9 @@ It includes robust data cleaning (type casting, date normalization, de-duplicati
 - KPIs & visuals: monthly revenue (2024/2025), transactions by month, contract duration distribution, occupancy %, top-20 buildings by occupancy, and expired contracts by building
 - Exported clean CSVs for **Tableau** or downstream analytics
 
----
-
 ## Repository Structure
 
 Paths in the script are set for Colab (`/content/...`). If running locally, either mimic this structure or update the paths.
-
----
 
 ## Data Inputs
 
@@ -30,8 +26,6 @@ Paths in the script are set for Colab (`/content/...`). If running locally, eith
   - `Rental Status` (mapped to occupancy flag)  
   - `Price` (cleaned to numeric)  
   - `Building Name` (group level for occupancy)
-
----
 
 ## Data Cleaning & Feature Engineering
 
@@ -50,8 +44,6 @@ Paths in the script are set for Colab (`/content/...`). If running locally, eith
 - De-duplicate rows
 - **Occupancy flag**: map `Rental Status` to {LEASED/BOOKED → 1, VACANT/EXPIRED → 0}
 - **Building-level occupancy**: mean of `occupancy_flag` × 100
-
----
 
 ## Key Analyses & Visuals
 
@@ -75,8 +67,6 @@ The script uses **pandas**, **numpy**, **matplotlib**, and **seaborn**.
    - **Top 20 buildings by occupancy rate** (bar chart)
 
 These visuals support executive dashboards (e.g., in Tableau) for **Revenue**, **Occupancy**, **Expired Contracts**, and **Seasonality**.
-
----
 
 ## How to Run
 
